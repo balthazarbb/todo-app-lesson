@@ -1,0 +1,12 @@
+<h1>ToDo Details</h1>
+
+<h3>Title: {{data.title}}</h3>
+<h4>Description: {{data.description}}</h4>
+
+<form action="/todos/{{data._id}}/delete" method="POST">
+  <button class="btn btn-danger">Delete</button>
+</form>
+
+<form action="/todos/{{data.id}}/edit" method="GET">
+  <button type="submit" class="btn btn-warning">Edit</button>
+</form>

@@ -1,0 +1,12 @@
+<h1>All my ToDos</h1>
+
+<ul class="list-group">
+
+  {{#each allTodos}}
+    <li class="list-group-item">
+      <a href="/todos/{{this._id}}">{{this.title}}<a>
+    </li>
+  {{/each}}
+
+</ul>
+
