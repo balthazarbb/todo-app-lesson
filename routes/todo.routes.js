@@ -110,7 +110,7 @@ router.post('/todos/:id/delete', (req, res, next) => {
   // 2. use the ,findByIdAndDelete() to delete the element from the DB
   ToDo.findByIdAndDelete(id)
   .then( (data) => {
-    // 3. after the update is done correctly, we can redirect the user to the list of ToDos
+    // 3. after the delete is done correctly, we can redirect the user to the list of ToDos
     res.redirect('/todos')
   })
   .catch( (err) => console.log(err));
