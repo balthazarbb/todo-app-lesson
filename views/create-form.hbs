@@ -1,17 +1,23 @@
 <h1>Add a ToDo</h1>
 
-
+{{!-- The method and action need to match the route in our server. See todo.routes.js second (C)reate Route --}}
 <form action="/todos/create" method="POST">
+  <div class="mb-3">
 
-  <label for="title">Title</label>
-  <input type="text" name="title">
+    <label class="form-label" for="title">Title</label>
+    {{!-- the name attribute of the input tag is NEEDED and will define the key to access the information --}}
+    <input class="form-control" type="text" name="title">
 
-  <br>
+    <br>
 
-  <label for="">Description</label>
-  <input type="text" name="description">
+    <label class="form-label" for="">Description</label>
+    {{!-- the name attribute of the input tag is NEEDED and will define the key to access the information --}}
+    <input class="form-control" type="text" name="description">
 
-  <br>
+    <br>
 
-  <button type="submit">Button</button>
+    {{!-- when we click the button, the input values will be transmitted through the body of the request --}}
+    <button class="btn btn-primary" type="submit">SUBMIT</button>
+
+  </div>
 </form>

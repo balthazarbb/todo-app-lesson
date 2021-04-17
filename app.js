@@ -28,7 +28,7 @@ app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
 const index = require('./routes/index');
 app.use('/', index);
 
-// link to our ToDo routes
+// link to our ToDo routes with our main app.js
 const todoRoutes = require('./routes/todo.routes')
 app.use('/', todoRoutes)
 
