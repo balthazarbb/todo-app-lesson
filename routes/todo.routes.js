@@ -35,6 +35,7 @@ router.get("/todos", (req, res, next) => {
   // 1. we need to get the ToDo elements from the DB using the .find() method. If we don't pass an argument it will fetch all elements
   ToDo.find()
   .then((allTodos) => {
+    console.log(allTodos);
     // 2. renders a the todos-list.hbs view with all ToDos
     res.render('todos-list.hbs', { allTodos }) // we send the element to the .hbs by wrapping it in {}
   })
